@@ -68,14 +68,18 @@ El script automatiza el proceso de construcción y despliegue de una aplicación
 ## Principios DevOps Aplicados
 
 1. **Automatización**
-   - Se utilizó un **script Bash** (`deploy.sh`) para automatizar la construcción de la imagen, el despliegue del contenedor y la verificación del servicio.
-   - Esto reduce la intervención manual y garantiza que el proceso sea repetible y eficiente.
+
+   - Se implementó un **script Bash** (`deploy.sh`) para automatizar tareas como la construcción de la imagen Docker, el despliegue del contenedor y la verificación del servicio.
+   - **Beneficio**: Reduce la intervención manual, minimiza errores humanos y garantiza un proceso repetible y eficiente en cualquier entorno.
+
 2. **Infraestructura como Código (IaC)**
-   - Se empleó **Docker** para definir el entorno de ejecución de la aplicación en un `Dockerfile`.
-   - Esto asegura que el entorno sea consistente en cualquier máquina o servidor donde se ejecute, evitando el clásico problema de "funciona en mi máquina".
+
+   - Se utilizó **Docker** para definir el entorno de ejecución de la aplicación mediante un `Dockerfile`.
+   - **Beneficio**: Asegura que el entorno sea consistente en cualquier máquina o servidor, eliminando el problema clásico de "funciona en mi máquina" y facilitando la portabilidad.
+
 3. **Observabilidad y Monitorización**
-   - Se incluyó una prueba automática con `curl` en el script de despliegue para verificar que el servicio responde correctamente.
-   - Esto permite detectar fallos rápidamente y confirmar que la aplicación está operativa después del despliegue.
+   - Se incluyó una prueba automática con `curl` en el script de despliegue para verificar que el servicio responde correctamente en el endpoint `/health`.
+   - **Beneficio**: Permite detectar fallos rápidamente después del despliegue y garantiza que la aplicación esté operativa antes de considerarla exitosa.
 
 ## Captura de Pantalla
 
