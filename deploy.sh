@@ -26,7 +26,7 @@ docker run -d -p 8080:8080 --name node-container -e PORT=8080 -e NODE_ENV=produc
 sleep 3
 
 # Realiza una prueba de conectividad
-if curl -s http://localhost:8080; then
+if curl -s http://localhost:8080/health; then
     echo -e "\nLa aplicación está funcionando correctamente."
 else
     echo "Error: La aplicación no responde."
