@@ -12,7 +12,7 @@ COPY app.js ./
 RUN npm install --omit=dev
 
 # Expone el puerto de la aplicación
-EXPOSE 8080
+EXPOSE 3000
 
 # Define el comando para ejecutar la aplicación
 CMD ["node", "app.js"]
